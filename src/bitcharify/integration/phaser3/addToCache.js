@@ -1,10 +1,9 @@
 /**
- * TBD
- *
- * @param {object} fontData TBD
- * @param {object} frame TBD
- * @param {object} texture TBD
- * @returns {object} TBD
+ * TBD.
+ * @param {object} fontData - TBD.
+ * @param {object} frame - TBD.
+ * @param {object} texture - TBD.
+ * @returns {object} TBD.
  */
 function getBitmapFontData(fontData, frame, texture) {
   const xSpacing = 0;
@@ -84,12 +83,11 @@ function getBitmapFontData(fontData, frame, texture) {
 }
 
 /**
- * TBD
- *
- * @param {object} game TBD
- * @param {string} key TBD
- * @param {object} fontData TBD
- * @param {HTMLImageElement|HTMLCanvasElement} textureSource TBD
+ * TBD.
+ * @param {object} game - TBD.
+ * @param {string} key - TBD.
+ * @param {object} fontData - TBD.
+ * @param {HTMLImageElement|HTMLCanvasElement} textureSource - TBD.
  */
 export function addToCache(game, key, fontData, textureSource) {
   game.textures.addImage(key, textureSource);
