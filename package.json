@@ -1,6 +1,6 @@
 {
   "name": "@vpmedia/bitcharify-phaser3",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "@vpmedia/bitcharify-phaser3 is the integration add-on for the @vpmedia/bitcharify bitmap font generator with the Phaser v3 game engine",
   "author": "Andras Csizmadia <andras@vpmedia.hu> (www.vpmedia.hu)",
   "license": "MIT",
