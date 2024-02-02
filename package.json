@@ -1,6 +1,6 @@
 {
   "name": "@vpmedia/bitcharify-phaser3",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "@vpmedia/bitcharify-phaser3 is the integration add-on for the @vpmedia/bitcharify bitmap font generator with the Phaser v3 game engine",
   "author": "Andras Csizmadia <andras@vpmedia.hu> (www.vpmedia.hu)",
   "license": "MIT",
@@ -22,7 +22,7 @@
   "type": "module",
   "devDependencies": {
     "@jest/globals": "^29.7.0",
-    "@types/jest": "^29.5.11",
+    "@types/jest": "^29.5.12",
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jest": "^27.6.3",
