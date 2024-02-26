@@ -21,10 +21,10 @@ function getBitmapFontData(fontData, frame, texture) {
   const adjustForTrim = frame !== undefined && frame.trimmed;
   let top = frame.height;
   let left = frame.width;
-  for (let i = 0; i < fontData.char.length; i += 1) {
-    const char = fontData.char[i];
+  for (let index = 0; index < fontData.char.length; index += 1) {
+    const char = fontData.char[index];
     const charCode = char.id;
-    const letter = String.fromCharCode(charCode);
+    const letter = String.fromCodePoint(charCode);
     let gx = char.x;
     let gy = char.y;
     const gw = char.width;
@@ -72,8 +72,8 @@ function getBitmapFontData(fontData, frame, texture) {
       }
     }
   }
-  for (let i = 0; i < fontData.kerning.length; i += 1) {
-    const kerning = fontData.kerning[i];
+  for (let index = 0; index < fontData.kerning.length; index += 1) {
+    const kerning = fontData.kerning[index];
     const first = kerning.first;
     const second = kerning.second;
     const amount = kerning.amount;
