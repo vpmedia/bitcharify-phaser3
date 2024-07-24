@@ -56,7 +56,7 @@ export default [
       ...unicornPlugin.configs['flat/recommended'].rules,
       'unicorn/filename-case': 'warn',
       'unicorn/no-null': 'warn',
-      'no-unused-vars': 'warn',
+      'no-unused-vars': 'off',
       'prefer-arrow-callback': 'warn',
       'prefer-template': 'warn',
       // 'import/extensions': ['warn', 'always'],
