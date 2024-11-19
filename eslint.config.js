@@ -51,7 +51,6 @@ export default [
       ...js.configs.recommended.rules,
       ...jsdocPlugin.configs['flat/recommended'].rules,
       ...unicornPlugin.configs['flat/recommended'].rules,
-      'unicorn/expiring-todo-comments': 'off',
       'unicorn/filename-case': 'warn',
       'unicorn/no-null': 'warn',
       'no-unused-vars': 'off',
