@@ -5,7 +5,7 @@
  * @param {object} texture - TBD.
  * @returns {object} TBD.
  */
-function getBitmapFontData(fontData, frame, texture) {
+const getBitmapFontData = (fontData, frame, texture) => {
   const xSpacing = 0;
   const ySpacing = 0;
   const textureX = frame.cutX;
@@ -80,7 +80,7 @@ function getBitmapFontData(fontData, frame, texture) {
     data.chars[second].kerning[first] = amount;
   }
   return data;
-}
+};
 
 /**
  * TBD.
