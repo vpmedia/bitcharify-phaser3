@@ -7,5 +7,5 @@
 
 ## Getting started
 
-    $ npm install --save @vpmedia/bitcharify
-    $ npm install --save @vpmedia/bitcharify-phaser3
+    $ pnpm add @vpmedia/bitcharify
+    $ pnpm add @vpmedia/bitcharify-phaser3
