@@ -41,7 +41,7 @@
     "test": "vitest --coverage --pass-with-no-tests",
     "lint": "eslint \"**/*.{js,jsx}\"",
     "typecheck": "tsc",
-    "format": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,md,css}\""
+    "format": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,css}\""
   },
   "browserslist": [
     "> 0.5%",
