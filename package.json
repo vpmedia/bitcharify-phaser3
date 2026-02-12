@@ -36,7 +36,7 @@
   "scripts": {
     "build": "exit 0",
     "test": "vitest --coverage --pass-with-no-tests",
-    "lint": "oxlint \"**/*.{js,jsx}\"",
+    "lint": "oxlint src",
     "typecheck": "tsc",
     "format": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,css}\""
   }
