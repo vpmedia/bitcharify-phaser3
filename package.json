@@ -17,9 +17,18 @@
     "phaser",
     "phaser3"
   ],
-  "main": "./src/index.js",
-  "types": "./types/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@commitlint/cli": "^21.0.0",
     "@commitlint/config-conventional": "^21.0.0",
@@ -33,10 +42,11 @@
     "vitest": "^4.1.5"
   },
   "scripts": {
-    "build": "exit 0",
+    "build": "tsc -p tsconfig.json",
     "test": "vitest --coverage --pass-with-no-tests",
     "lint": "oxlint src",
-    "typecheck": "tsc",
-    "format": "oxfmt --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,css}\""
+    "typecheck": "tsc --noEmit",
+    "format": "oxfmt --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,css}\"",
+    "check": "pnpm lint && pnpm test && pnpm typecheck"
   }
 }

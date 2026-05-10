@@ -1,11 +1,22 @@
+type BitmapFontData = BitcharifyPhaser3.BitmapFontData;
+type BitmapFontCacheChar = BitcharifyPhaser3.BitmapFontCacheChar;
+type BitmapFontCacheData = BitcharifyPhaser3.BitmapFontCacheData;
+type Phaser3Frame = BitcharifyPhaser3.Phaser3Frame;
+type Phaser3Game = BitcharifyPhaser3.Phaser3Game;
+type Phaser3Texture = BitcharifyPhaser3.Phaser3Texture;
+
 /**
- * TBD.
- * @param {object} fontData - TBD.
- * @param {object} frame - TBD.
- * @param {object} texture - TBD.
- * @returns {object} TBD.
+ * Build the bitmap font cache payload that Phaser 3 expects from raw BMFont data.
+ * @param fontData - Parsed BMFont JSON.
+ * @param frame - Phaser 3 texture frame for the font atlas.
+ * @param texture - Phaser 3 texture that will receive per-glyph sub-frames.
+ * @returns The cache data ready to be stored under `game.cache.bitmapFont`.
  */
-const getBitmapFontData = (fontData, frame, texture) => {
+const getBitmapFontData = (
+  fontData: BitmapFontData,
+  frame: Phaser3Frame,
+  texture: Phaser3Texture,
+): BitmapFontCacheData => {
   const xSpacing = 0;
   const ySpacing = 0;
   const textureX = frame.cutX;
@@ -13,11 +24,13 @@ const getBitmapFontData = (fontData, frame, texture) => {
   const textureWidth = frame.source.width;
   const textureHeight = frame.source.height;
   const sourceIndex = frame.sourceIndex;
-  const data = {};
-  data.font = fontData.info[0].face;
-  data.size = fontData.info[0].size;
-  data.lineHeight = fontData.common[0].lineHeight + ySpacing;
-  data.chars = {};
+  const chars: Record<number, BitmapFontCacheChar> = {};
+  const data: BitmapFontCacheData = {
+    font: fontData.info[0].face,
+    size: fontData.info[0].size,
+    lineHeight: fontData.common[0].lineHeight + ySpacing,
+    chars,
+  };
   const adjustForTrim = frame !== undefined && frame.trimmed;
   let top = frame.height;
   let left = frame.width;
@@ -48,7 +61,7 @@ const getBitmapFontData = (fontData, frame, texture) => {
     const v0 = (textureY + gy) / textureHeight;
     const u1 = (textureX + gx + gw) / textureWidth;
     const v1 = (textureY + gy + gh) / textureHeight;
-    data.chars[charCode] = {
+    chars[charCode] = {
       x: gx,
       y: gy,
       width: gw,
@@ -77,19 +90,24 @@ const getBitmapFontData = (fontData, frame, texture) => {
     const first = kerning.first;
     const second = kerning.second;
     const amount = kerning.amount;
-    data.chars[second].kerning[first] = amount;
+    chars[second].kerning[first] = amount;
   }
   return data;
 };
 
 /**
- * TBD.
- * @param {object} game - TBD.
- * @param {string} key - TBD.
- * @param {object} fontData - TBD.
- * @param {HTMLImageElement|HTMLCanvasElement} textureSource - TBD.
+ * Register a bitmap font with Phaser 3's caches.
+ * @param game - The active Phaser 3 game instance.
+ * @param key - Cache key shared between the texture and bitmap-font caches.
+ * @param fontData - Parsed BMFont JSON data.
+ * @param textureSource - The font atlas image or canvas source.
  */
-export function addToCache(game, key, fontData, textureSource) {
+export function addToCache(
+  game: Phaser3Game,
+  key: string,
+  fontData: BitmapFontData,
+  textureSource: HTMLImageElement | HTMLCanvasElement,
+): void {
   game.textures.addImage(key, textureSource);
   const texture = game.textures.get(key);
   const frame = game.textures.getFrame(key);

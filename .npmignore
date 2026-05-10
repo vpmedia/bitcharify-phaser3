@@ -8,10 +8,11 @@
 .github/
 build/
 coverage/
-dist/
 logs/
 node_modules/
 out/
+src/
+typedefs/
 
 # files
 .DS_Store
@@ -21,9 +22,9 @@ out/
 .npmignore
 .oxlintrc.json
 .oxfmtrc.json
-commitlint.config.js
+commitlint.config.ts
 lefthook.yml
 pnpm-lock.yaml
 pnpm-workspace.yaml
 tsconfig.json
-vitest.config.js
+vitest.config.ts

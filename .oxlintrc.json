@@ -3,7 +3,6 @@
   "env": { "browser": true },
   "plugins": [
     "eslint",
-    "jsdoc",
     "jsx-a11y",
     "oxc",
     "promise",
