@@ -38,11 +38,12 @@
     "oxfmt": "^0.48.0",
     "oxlint": "^1.63.0",
     "oxlint-tsgolint": "^0.22.1",
+    "rolldown": "^1.0.0",
     "typescript": "^6.0.3",
     "vitest": "^4.1.5"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "rm -rf dist && rolldown -c && tsc -p tsconfig.json --emitDeclarationOnly",
     "test": "vitest --coverage --pass-with-no-tests",
     "lint": "oxlint src",
     "typecheck": "tsc --noEmit",
