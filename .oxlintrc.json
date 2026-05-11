@@ -12,15 +12,29 @@
     "unicorn"
   ],
   "categories": {
-    "correctness": "warn",
-    "nursery": "warn",
-    "pedantic": "warn",
-    "perf": "warn",
-    "restriction": "warn",
-    "style": "warn",
-    "suspicious": "warn"
+    "correctness": "error",
+    "nursery": "off",
+    "pedantic": "error",
+    "perf": "error",
+    "restriction": "error",
+    "style": "error",
+    "suspicious": "error"
   },
   "rules": {
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "capitalized-comments": "off",
+    "func-style": "off",
+    "id-length": "off",
+    "max-lines-per-function": "off",
+    "max-params": "off",
+    "max-statements": "off",
+    "no-magic-numbers": "off",
+    "no-undefined": "off",
+    "object-shorthand": "off",
+    "prefer-destructuring": "off",
+    "sort-keys": "off",
+    "typescript/prefer-for-of": "off",
+    "unicorn/filename-case": "off",
+    "unicorn/no-null": "off"
   }
 }
