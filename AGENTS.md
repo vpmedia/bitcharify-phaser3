@@ -11,7 +11,7 @@ Integration add-on that wires the `@vpmedia/bitcharify` bitmap font generator in
 - **Package Manager:** pnpm (workspaces)
 - **Peer/Runtime:** `phaser` v3
 - **Build:** Rolldown + `tsc --emitDeclarationOnly`
-- **Testing:** Vitest, @vitest/coverage-v8, jsdom
+- **Testing:** Vitest, @vitest/coverage-v8, happy-dom
 - **Lint/Format:** oxlint (+ `oxlint-tsgolint`), oxfmt
 - **Type Checking:** TypeScript
 - **Tooling:** lefthook (git hooks), commitlint (conventional commits)
@@ -22,6 +22,7 @@ Integration add-on that wires the `@vpmedia/bitcharify` bitmap font generator in
 - OXC (oxlint, oxfmt): https://oxc.rs/llms.txt
 - Phaser 3: https://context7.com/phaserjs/phaser/llms.txt
 - Rolldown: https://rolldown.rs/llms.txt
+- TypeScript: https://context7.com/websites/typescriptlang/llms.txt
 - Vitest: https://vitest.dev/llms.txt
 
 ## Commands
