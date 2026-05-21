@@ -15,7 +15,7 @@ type Phaser3Texture = BitcharifyPhaser3.Phaser3Texture;
 const getBitmapFontData = (
   fontData: BitmapFontData,
   frame: Phaser3Frame,
-  texture: Phaser3Texture,
+  texture: Phaser3Texture
 ): BitmapFontCacheData => {
   const xSpacing = 0;
   const ySpacing = 0;
@@ -106,7 +106,7 @@ export function addToCache(
   game: Phaser3Game,
   key: string,
   fontData: BitmapFontData,
-  textureSource: HTMLImageElement | HTMLCanvasElement,
+  textureSource: HTMLImageElement | HTMLCanvasElement
 ): void {
   game.textures.addImage(key, textureSource);
   const texture = game.textures.get(key);

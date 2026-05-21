@@ -29,7 +29,7 @@ declare global {
         x: number,
         y: number,
         width: number,
-        height: number,
+        height: number
       ): Phaser3Frame | null | undefined;
     }
 
@@ -40,10 +40,7 @@ declare global {
     }
 
     interface Phaser3BitmapFontCache {
-      add(
-        key: string,
-        value: { data: BitmapFontCacheData; texture: string; frame: string | null },
-      ): void;
+      add(key: string, value: { data: BitmapFontCacheData; texture: string; frame: string | null }): void;
     }
 
     interface Phaser3CacheManager {
