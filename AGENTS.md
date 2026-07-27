@@ -35,3 +35,9 @@ Read [package.json](package.json) for the language, runtime, dependencies and to
 
 - Vitest with coverage; configured to pass with no tests
 - Place tests as `*.test.ts` co-located with source under `src/`
+
+## Reference Documentation
+
+Read on demand:
+
+- [clean-code.md](docs/agents/clean-code.md) — general clean-code guidelines: naming, functions, comments, error handling, classes, testing, and refactoring.
